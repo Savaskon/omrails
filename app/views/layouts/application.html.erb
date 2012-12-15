@@ -1,9 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-	<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
-<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
-<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+<head>
       <title>Omrails</title>
      <%= stylesheet_link_tag    "application", :media => "all" %>
      <%= javascript_include_tag "application" %>
@@ -14,13 +11,16 @@
         <header class="navbar navbar-fixed-top">
           <div class="navbar-inner">
             <div class="container">
-              <%= link_to "One Month Rails", root_path, id: "logo" %>
+              <%= link_to "My first project", root_path, id: "logo" %>
               <nav>
                 <ul class="nav pull-right">
+				
 				<% if user_signed_in? %>
+				
 					<li><%= link_to "Sign Out", destroy_user_session_path, :method => :Delete%></li>
 					<% else %>
 					<li><%= link_to "Sign In", new_user_session_path %></li>
+					
 					<% end %>
                     <li><%= link_to "About", about_path %></li>
 					
@@ -36,5 +36,6 @@
             <% end %>
             <%= yield %>
         </div>
+		
     </body>
 </html>
