@@ -19,11 +19,33 @@
     <h1>What's Going on in the City.. </hi>
 
     <h2>
-      today...December 12th
+        <script language = "JavaScript">
+var now = new Date();
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var monNames = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+document.write("Today.." + dayNames[now.getDay()] + " " + monNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear());
+</script>
     </h2>
 
     <%= link_to "Sign up now!", new_user_registration_path, 
                                 class: "btn btn-large btn-primary" %>
+</div>
+<div class="row">
+  <div class="span3">
+    <div class="page-header">
+      <p class="pull-right"><a href="#">see all</a></p>
+      <h4>Honors <small>(10)</small></h4>
+    </div>
+	<div>
+    	<a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+        <a href="#"><img src="http://placehold.it/60x60" class="img-circle"></a>
+	</div>
+  </div>
 </div>
 
 <% end %>
