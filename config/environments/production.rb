@@ -65,12 +65,4 @@ Omrails::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
    config.action_mailer.default_url_options = { :host => 'localhost:3000'}
-   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['sabio'],
-    :access_key_id => ENV['AKIAJXWJNMXX76XDIJ3A'],
-    :secret_access_key => ENV['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']
-  }
-}
-end
+   end

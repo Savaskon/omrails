@@ -1,12 +1,14 @@
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
+ 
   # GET /pins
   # GET /pins.json
   def index
     @pins = Pin.order("created_at desc")
 
-    respond_to do |format|
+     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render json: @pins }
     end
   end
@@ -15,7 +17,6 @@ class PinsController < ApplicationController
   # GET /pins/1.json
   def show
     @pin = Pin.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @pin }
