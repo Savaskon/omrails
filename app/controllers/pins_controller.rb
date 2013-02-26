@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /pins
   # GET /pins.json
   def index
@@ -35,7 +35,7 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
-    @pin =current_user.pins.find(params[:id])
+    @pin = current_user.pins.find(params[:id])
   end
 
   # POST /pins
