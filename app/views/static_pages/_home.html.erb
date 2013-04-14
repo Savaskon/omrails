@@ -1,8 +1,6 @@
 ﻿<% unless user_signed_in? %>
 <div class="center hero-unit">
-
-    <h1>What's Going on in the City.. </hi>
-
+    <h1>What's Up in the City.. </hi>
     <h2>
         <script language = "JavaScript">
 var now = new Date();
@@ -12,9 +10,7 @@ document.write("Today.." + dayNames[now.getDay()] + " " + monNames[now.getMonth(
 </script>
     </h2>
 
-    <%= link_to "Sign up now!", new_user_registration_path, 
-                                class: "btn btn-large btn-primary" %>
-</div>
-
+    <%= link_to "Sign up now!", new_user_registration_path,
+						 class: "btn btn-large btn-primary" %>
 
 <% end %>

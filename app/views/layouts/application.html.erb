@@ -10,10 +10,10 @@
         <header>
         <header class="navbar navbar-fixed-top">
           <div class="navbar-inner" >
-            <div class="container" >
+            <div class="container-fluid" >
               <%= link_to "1 Day- 1 moment- 1 Photo", root_path, id: "logo" %>
               <nav>
-                <ul class="nav pull-right">
+                <ul class="nav pull-left">
 				
 				<% if user_signed_in? %>
           <li><%= link_to "Add +", new_pin_path %></li>
